@@ -17,7 +17,6 @@ Conta.prototype.banco = "X - Bank";
 
 Conta.prototype.extrato = function() {
   console.log(`===EXTRATO=${this.titular}===`)
-
   console.log('===SAQUE===') // SAQUE
   if(this.lançamentos.saque.length == 0){
     console.log('NÃO HOUVE SAQUE!!!')
@@ -40,7 +39,7 @@ Conta.prototype.extrato = function() {
 
   console.log('===TRANSFERÊNCIA===') // TRANSFERÊNCIA
   if(this.lançamentos.tranferencia.length == 0){
-    console.log('NÃO HOUVE TRANSFERÊNCIA!!')
+    console.log('NÃO HOUVE TRANSFERÊNCIA!!!')
   }else{
     for(let c = 0; c < this.lançamentos.tranferencia.length; c++){
       p = c + 1
@@ -65,17 +64,17 @@ Conta.prototype.sacar = function(valor) {
   return "Saldo Insuficiente!";
 }
 
-Conta.prototype.transferir = function(valor, conta) {  
+Conta.prototype.transferir = function(valor, contaXxx) {  
   this.sacar(valor); // origem 
   this.lançamentos.saque.pop()
-  conta.depositar(valor); // destino
-  conta.lançamentos.deposito.pop()
+  contaXxx.depositar(valor); // destino
+  contaXxx.lançamentos.deposito.pop()
   this.lançamentos.tranferencia.push(valor)
   return this.saldo;
 }
 
-const contaMarcos = new Conta(336, 1234, 0, 2000, "MARCOS");
-const contaJoao = new Conta(336, 4567, 8, 3000, "JOÃO");
+const contaMarcos = new Conta(332, 1234, 0, 2000, "MARCOS");
+const contaJoao = new Conta(332, 4567, 8, 3000, "JOÃO");
 
 // Conta do João
 console.log(contaMarcos);
