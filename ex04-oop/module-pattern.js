@@ -3,46 +3,45 @@ console.log("=== EX-04-OOP-CALCULADORA ===");
 
 const MODULE = (function () {
   
-  var calculadora = {};
-  var result = 0;
+  var calculadora = {total:0};  
   
   calculadora.somar = function(num) {
-    result +=num    
+    calculadora.total +=num    
   }  
 
   calculadora.subtrair = function(num) {
-    if(result === 0){
-      result = num
+    if(calculadora.total === 0){
+      calculadora.total = num
     }else{
-      result -=num
+      calculadora.total -=num
     }
     
   }
 
   calculadora.multiplicar = function(num) {
-    if(result === 0){
-      result = num
+    if(calculadora.total === 0){
+      calculadora.total = num
     }else{
-      result *=num
+      calculadora.total *=num
     }    
   }
 
   calculadora.dividir = function(num) {    
-    if(result === 0){
-      result = num
+    if(calculadora.total === 0){
+      calculadora.total = num
     }else{
-      result /=num
+      calculadora.total /=num
     }
   }
 
   calculadora.limpar= function (){    
     console.clear()
-    result = 0
-    return result
+    calculadora.total = 0
+    return calculadora.total
   }
 
   calculadora.resultado= function (){    
-    return result
+    return calculadora.total
   }
 
   
