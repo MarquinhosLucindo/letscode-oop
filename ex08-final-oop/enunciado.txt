@@ -1,0 +1,15 @@
+Enunciado
+DESAFIO FINAL:
+
+1-Implementar a classe (Animal) ok
+2-Implementar um construtor ok
+3-Implementar propriedades privadas ok
+4-Implementar três métodos públicos ok
+5-Implementar três classes filhas (Papagaio, Cachorro, Gato), de forma que elas herdem da classe pai (Animal) ok
+6-Implemente um novo método em cada uma das classes filhas ok
+7-Sobrescreva o construtor em cada uma das classes filhas ok
+8-Sobrescreva um dos métodos herdados da classe pai ok
+
+Não esqueça de submeter, além deste desafio final, todos os outros desafios que você já fez.
+
+Entregas somente com link no github #teviralindo

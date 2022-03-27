@@ -18,7 +18,9 @@ class Tv {
       max: 5,
       atual: 0
     }
-  }  
+  }
+  
+  
   
   ligaDesliga() {
     let campoTv = document.getElementById('tv') 
@@ -34,8 +36,7 @@ class Tv {
       this.status = false
       console.log(this.status)
       campoTv.src="./assets/images/tv0.jpg"
-      this.mudaVolume(0)
-      this.status = 0;
+      this.mudaVolume(0)      
     }
     
   }
